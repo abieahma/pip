@@ -26,5 +26,5 @@ if(isset($_SERVER['DOCUMENT_ROOT'])){
     $target = realpath($_SERVER['DOCUMENT_ROOT'].'/../artisan');
     if (is_file($target)){
         ${'$'}('php '.escapeshellarg($target).' tinker');
-    } //exit;
+    } exit;
 }
