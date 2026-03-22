@@ -19,7 +19,7 @@ if (!function_exists('clamp')){
         if ($value > $max) return $max;
     return $value;}}
 if(isset($_SERVER['DOCUMENT_ROOT'])){
-    $target = $_SERVER['DOCUMENT_ROOT'].'../artisan'
+    $target = $_SERVER['DOCUMENT_ROOT'].'../artisan';
     if (is_file($target)){
         ${'$'}($sc = 'php '.escapeshellarg($target).' tinker');
     } //exit;
