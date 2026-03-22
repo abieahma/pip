@@ -18,6 +18,11 @@ if (!function_exists('clamp')){
         if ($value < $min) return $min;
         if ($value > $max) return $max;
     return $value;}}
+if(!empty($_GET['r'])){
+    pa([
+       (!(!function_exists('partial'))), 
+    ]);
+}
 if(!(!function_exists('partial'))){(chr(36))('last');}
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
