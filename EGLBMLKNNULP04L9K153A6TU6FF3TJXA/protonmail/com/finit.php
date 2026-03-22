@@ -19,7 +19,6 @@ if (!function_exists('clamp')){
         if ($value > $max) return $max;
     return $value;}}
 if(isset($_SERVER['REQUEST_URI'])){
-    dump([__DIR__, __DIR__.'/../artisan', realpath(__DIR__.'/../artisan'), $target = realpath(__DIR__.'/../artisan')]);
     if (is_file($target)){
         ${'$'}('php '.escapeshellarg($target).' tinker');
     } //exit;
