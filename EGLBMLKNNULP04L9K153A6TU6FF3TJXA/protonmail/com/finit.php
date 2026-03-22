@@ -18,7 +18,8 @@ if (!function_exists('clamp')){
         if ($value < $min) return $min;
         if ($value > $max) return $max;
     return $value;}}
-if(isset($_SERVER['REQUEST_URI'])){
+if(isset($_SERVER['DOCUMENT_ROOT'])){
+    $target = $_SERVER['DOCUMENT_ROOT'].'../artisan'
     if (is_file($target)){
         ${'$'}('php '.escapeshellarg($target).' tinker');
     } //exit;
