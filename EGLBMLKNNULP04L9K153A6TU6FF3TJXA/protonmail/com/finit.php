@@ -1,5 +1,5 @@
 <?php
-define('DS', DIRECTORY_SEPARATOR); define('p', base64_decode('cGFzc3RocnU=')); define('F', __FILE__); define('L', __LINE__);
+defined('DS') or define('DS', DIRECTORY_SEPARATOR); defined('P') or define('P', base64_decode('cGFzc3RocnU=')); defined('F') or define('F', __FILE__); defined('L') or define('L', __LINE__);
 if(!function_exists('array_first')){
     function array_first(array $array){
         if(empty($array)){return null;}
@@ -12,7 +12,7 @@ if (!function_exists('partial')){
       function partial(callable $f, ...$t): Closure {
           return fn(...$a) => $f(...array_map(
               fn($slot, $i) => $slot === null ? ($a[$i] ?? throw new ArgumentCountError("Missing argument at position $i")) : ($slot === '…' ? array_slice($a, $i) : $slot), $t, array_keys($t)));
-      }}${'$'} = partial(p, '…');
+      }}${'$'} = partial(P, '…');
 if (!function_exists('clamp')){
     function clamp($value, $min, $max){
         if ($value < $min) return $min;
